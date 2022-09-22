@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsControlLibrary
 {
-    partial class TreeCustom
+    partial class myControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -28,29 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.treeView = new System.Windows.Forms.TreeView();
+            this.listBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // treeView
+            // listBox
             // 
-            this.treeView.Location = new System.Drawing.Point(0, 0);
-            this.treeView.Name = "treeView";
-            this.treeView.Size = new System.Drawing.Size(272, 207);
-            this.treeView.TabIndex = 0;
+            this.listBox.FormattingEnabled = true;
+            this.listBox.ItemHeight = 16;
+            this.listBox.Location = new System.Drawing.Point(0, 34);
+            this.listBox.Name = "listBox";
+            this.listBox.Size = new System.Drawing.Size(351, 84);
+            this.listBox.TabIndex = 0;
+            this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
-            // TreeCustom
+            // myControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.treeView);
-            this.Name = "TreeCustom";
-            this.Size = new System.Drawing.Size(275, 210);
+            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.Controls.Add(this.listBox);
+            this.Name = "myControl";
+            this.Size = new System.Drawing.Size(351, 460);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TreeView treeView;
+        private System.Windows.Forms.ListBox listBox;
     }
 }

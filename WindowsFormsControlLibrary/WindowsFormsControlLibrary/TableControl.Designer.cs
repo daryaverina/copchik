@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsControlLibrary
 {
-    partial class TimePickBox
+    partial class TableControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -28,40 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.labelError = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker
+            // dataGridView
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(0, 0);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker.TabIndex = 0;
-            this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(37, 19);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 24;
+            this.dataGridView.Size = new System.Drawing.Size(244, 150);
+            this.dataGridView.TabIndex = 0;
             // 
-            // labelError
+            // TableControl
             // 
-            this.labelError.Location = new System.Drawing.Point(0, 23);
-            this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(197, 20);
-            this.labelError.TabIndex = 1;
-            // 
-            // TimePickBox
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.labelError);
-            this.Controls.Add(this.dateTimePicker);
-            this.Name = "TimePickBox";
-            this.Size = new System.Drawing.Size(200, 135);
+            this.BackColor = System.Drawing.Color.PapayaWhip;
+            this.Controls.Add(this.dataGridView);
+            this.Name = "TableControl";
+            this.Size = new System.Drawing.Size(317, 340);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
-        private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

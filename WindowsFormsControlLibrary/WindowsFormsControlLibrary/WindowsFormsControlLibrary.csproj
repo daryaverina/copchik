@@ -42,36 +42,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SelectedListBox.cs">
+    <Compile Include="ColumnsDataGrid.cs" />
+    <Compile Include="myControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SelectedListBox.Designer.cs">
-      <DependentUpon>SelectedListBox.cs</DependentUpon>
+    <Compile Include="myControl.Designer.cs">
+      <DependentUpon>myControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TimePickBox.cs">
+    <Compile Include="TableControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TimePickBox.Designer.cs">
-      <DependentUpon>TimePickBox.cs</DependentUpon>
+    <Compile Include="TableControl.Designer.cs">
+      <DependentUpon>TableControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="TreeCustom.cs">
+    <Compile Include="TextControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TreeCustom.Designer.cs">
-      <DependentUpon>TreeCustom.cs</DependentUpon>
+    <Compile Include="TextControl.Designer.cs">
+      <DependentUpon>TextControl.cs</DependentUpon>
     </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SelectedListBox.resx">
-      <DependentUpon>SelectedListBox.cs</DependentUpon>
+    <EmbeddedResource Include="myControl.resx">
+      <DependentUpon>myControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TimePickBox.resx">
-      <DependentUpon>TimePickBox.cs</DependentUpon>
+    <EmbeddedResource Include="TableControl.resx">
+      <DependentUpon>TableControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TreeCustom.resx">
-      <DependentUpon>TreeCustom.cs</DependentUpon>
+    <EmbeddedResource Include="TextControl.resx">
+      <DependentUpon>TextControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
