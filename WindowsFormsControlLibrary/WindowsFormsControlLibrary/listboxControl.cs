@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsControlLibrary
 {
-    public partial class myControl : UserControl
+    public partial class ListboxControl : UserControl
     {
-        private bool initialOpen = true;
-        public myControl()
+        public ListboxControl()
         {
             InitializeComponent();
             listBox.SelectedIndexChanged+=(sender, e)=> eventHandler?.Invoke(sender,e);
@@ -47,7 +46,6 @@ namespace WindowsFormsControlLibrary
         public void Clear()
         {
             listBox.Items.Clear();
-            //listBox.Items.Clear();
         }
 
         public event EventHandler eventHandler;
@@ -62,8 +60,6 @@ namespace WindowsFormsControlLibrary
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             MessageBox.Show("You selected " + SelectedElement.ToString());  
-            
-            initialOpen = false;
         }
     }
 }

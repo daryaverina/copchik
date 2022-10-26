@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsControlLibrary
 {
-    partial class myControl
+    partial class ListboxControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.

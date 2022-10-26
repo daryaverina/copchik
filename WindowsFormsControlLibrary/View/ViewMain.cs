@@ -84,5 +84,10 @@ namespace View
         {
             myControl1.Clear();
         }
+
+        private void ButtonAddText_Click(object sender, EventArgs e)
+        {
+            textControl1.Number = 5;
+        }
     }
 }

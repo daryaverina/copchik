@@ -40,7 +40,6 @@
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(100, 22);
             this.textBox.TabIndex = 0;
-            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // checkBox
             // 
@@ -55,12 +54,10 @@
             // labelError
             // 
             this.labelError.AutoSize = true;
-            this.labelError.BackColor = System.Drawing.Color.Red;
-            this.labelError.Location = new System.Drawing.Point(63, 79);
+            this.labelError.Location = new System.Drawing.Point(55, 77);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(35, 16);
+            this.labelError.Size = new System.Drawing.Size(0, 16);
             this.labelError.TabIndex = 2;
-            this.labelError.Text = "error";
             // 
             // TextControl
             // 

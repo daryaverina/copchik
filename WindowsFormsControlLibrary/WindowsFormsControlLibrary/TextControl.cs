@@ -17,81 +17,42 @@ namespace WindowsFormsControlLibrary
         public TextControl()
         {
             InitializeComponent();
-            textBox.TextAlignChanged += (sender, e) => eventHandler?.Invoke(sender, e);
         }
 
-        public event EventHandler eventHandler;
-
-        /// <summary>
-        /// Событие, которое вызывается при изменении элемента
-        /// </summary>
-        public event EventHandler SpecEvent
+        public int? Number
         {
-            add { eventHandler += value; }
-            remove { eventHandler -= value; }
-        }
-
-        public int? ValueTextBox
-        {
+            set
+            {
+                checkBox.Checked = !value.HasValue;
+                textBox.Text = value.ToString();
+            }
             get
             {
-                if (CheckValueInt())
+                if (checkBox.Checked)
                 {
-                    labelError.BackColor = Color.Green;
-                    return (Convert.ToInt32(textBox.Text));
+                    return null;
+                }
+                else if (string.IsNullOrEmpty(textBox.Text))
+                {
+                    throw new Exception("Fill in a value or check a checkbox");
                 }
                 else
                 {
-                    labelError.BackColor = Color.Red;
-                    return (null);
+                    int? number = null;
+                    try
+                    {
+                        number = Convert.ToInt32(textBox.Text);
+                    }
+                    catch (Exception ex) { MessageBox.Show(ex.Message); }
+                    return number;
                 }
             }
-            set
-            {
-                if (CheckValueInt())
-                {
-                    labelError.BackColor = Color.Green;
-                    return;
-                }
-                ValueTextBox = Convert.ToInt32(textBox.Text);
-                textBox.Text = value.ToString();
-                 labelError.BackColor = Color.Red;
-            }
-        }
-
-        private bool CheckValueInt()
-        {
-            return (int.TryParse(textBox.Text.ToString(), out int value) ? true : false);
         }
 
         private void checkBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox.Checked)
-            {
-                textBox.ReadOnly = true;
-                textBox.Text = null;
-                textBox.BackColor = SystemColors.ScrollBar;
-                labelError.BackColor = Color.Green;
-            }
-            else
-            {
-                labelError.BackColor = Color.Red;
-                textBox.BackColor = SystemColors.Window;
-                textBox.ReadOnly = false;
-            }
-            
+            textBox.Enabled = !checkBox.Checked;
         }
 
-        private void textBox_TextChanged(object sender, EventArgs e)
-        {
-            if (int.TryParse(textBox.Text.ToString(), out int value))
-            {
-                ValueTextBox = Convert.ToInt32(textBox.Text);
-            }
-            else
-            {
-                ValueTextBox = null;
-            }
-        }
     }
 }

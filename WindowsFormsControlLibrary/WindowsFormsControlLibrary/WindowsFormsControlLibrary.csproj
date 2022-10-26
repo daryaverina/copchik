@@ -43,11 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColumnsDataGrid.cs" />
-    <Compile Include="myControl.cs">
+    <Compile Include="ListboxControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="myControl.Designer.cs">
-      <DependentUpon>myControl.cs</DependentUpon>
+    <Compile Include="ListboxControl.Designer.cs">
+      <DependentUpon>ListboxControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableControl.cs">
@@ -65,8 +65,8 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="myControl.resx">
-      <DependentUpon>myControl.cs</DependentUpon>
+    <EmbeddedResource Include="ListboxControl.resx">
+      <DependentUpon>ListboxControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TableControl.resx">
       <DependentUpon>TableControl.cs</DependentUpon>
